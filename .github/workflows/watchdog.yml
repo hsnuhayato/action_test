@@ -44,7 +44,7 @@ jobs:
           clangFormatVersion: 10
           github_token: ${{ secrets.github_token }}
           reporter: github-pr-review
-          level: error
+          level: info
           fail_on_error: true
           filter_mode: nofilter
 
