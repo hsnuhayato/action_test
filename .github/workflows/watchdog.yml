@@ -47,12 +47,12 @@ jobs:
       #     level: error
       #     fail_on_error: true
       #     filter_mode: file
+
       - uses: reviewdog/action-cpplint@master
         with:
           github_token: ${{ secrets.github_token }}
           reporter: github-pr-review
           # flags: --linelength=50 # Optional
-          targets: '--recursive .'
 
       # - uses: actions/setup-python@v1
       #   with:
