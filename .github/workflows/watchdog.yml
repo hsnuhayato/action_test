@@ -41,9 +41,9 @@ jobs:
           clangFormatVersion: 10
           github_token: ${{ secrets.github_token }}
           reporter: github-pr-review
-          level: info
+          level: error
           fail_on_error: true
-          filter_mode: nofilter
+          filter_mode: file
 
       # - uses: actions/setup-python@v1
       #   with:
