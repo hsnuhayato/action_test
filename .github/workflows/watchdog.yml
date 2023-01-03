@@ -47,9 +47,6 @@ jobs:
           level: error
           fail_on_error: true
           filter_mode: nofilter
-      - uses: reviewdog/action-suggester@v1
-        with:
-          tool_name: clang-format-lint-action
 
       # - uses: reviewdog/action-cpplint@master
       #   with:
