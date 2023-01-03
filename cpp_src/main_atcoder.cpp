@@ -59,6 +59,8 @@ int main() {
       // a[i] を選ぶ場合
       if (j >= a[i]) {chmin(dp[i + 1][j], dp[i][j - a[i]] + 1)
             };
+      if (j >= a[i]) {chmin(dp[i + 1][j], dp[i][j - a[i]] + 1)
+            };
 
       cout << dp[i + 1][j] << " ";
     }
