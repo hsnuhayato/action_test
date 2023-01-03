@@ -47,7 +47,6 @@ jobs:
       #     level: error
       #     fail_on_error: true
       #     filter_mode: file
-
       - uses: reviewdog/action-cpplint@master
         with:
           github_token: ${{ secrets.github_token }}
