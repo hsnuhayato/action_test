@@ -52,7 +52,7 @@ jobs:
           github_token: ${{ secrets.github_token }}
           reporter: github-pr-review
           # flags: --linelength=50 # Optional
-          # targets: './cpp_src'
+          targets: 'cpp_src'
 
       # - uses: actions/setup-python@v1
       #   with:
