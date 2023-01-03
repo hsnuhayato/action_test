@@ -41,15 +41,9 @@ int main() {
   // dp[0][10] = 1;
   // dp[0][20] = 1;
 
-
-
-
-
   // ループ
-  for (int i = 0; i < N; ++i)
-  {
-    for (int j = 0; j <= W; ++j)
-    {
+  for (int i = 0; i < N; ++i) {
+    for (int j = 0; j <= W; ++j) {
       // 初期条件
       if (i == 0) dp[i][a[j]] = 1;
 
@@ -57,12 +51,10 @@ int main() {
       chmin(dp[i + 1][j], dp[i][j]);
 
       // a[i] を選ぶ場合
-      if (j >= a[i]) {chmin(dp[i + 1][j], dp[i][j - a[i]] + 1)
-            };
-      if (j >= a[i]) {chmin(dp[i + 1][j], dp[i][j - a[i]] + 1)
-            };
-      if (j >= a[i]) {chmin(dp[i + 1][j], dp[i][j - a[i]] + 1)
-            };
+      if (j >= a[i])
+      {
+        chmin(dp[i + 1][j], dp[i][j - a[i]] + 1)
+      };
 
       cout << dp[i + 1][j] << " ";
     }
