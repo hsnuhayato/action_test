@@ -32,18 +32,27 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - uses: hsnuhayato/clang-format-lint-action@add_review_dog
-        env:
-          REVIEWDOG_GITHUB_API_TOKEN: ${{ secrets.github_token }}
+      #- uses: reviewdog/action-setup@v1
+      #  with:
+      #    reviewdog_version: latest
+      # - uses: hsnuhayato/clang-format-lint-action@add_review_dog
+      #   env:
+      #     REVIEWDOG_GITHUB_API_TOKEN: ${{ secrets.github_token }}
+      #   with:
+      #     source: './cpp_src'
+      #     extensions: 'h,cpp'
+      #     clangFormatVersion: 10
+      #     github_token: ${{ secrets.github_token }}
+      #     reporter: github-pr-review
+      #     level: error
+      #     fail_on_error: true
+      #     filter_mode: file
+      - uses: reviewdog/action-cpplint@master
         with:
-          source: './cpp_src'
-          extensions: 'h,cpp'
-          clangFormatVersion: 10
           github_token: ${{ secrets.github_token }}
           reporter: github-pr-review
-          level: error
-          fail_on_error: true
-          filter_mode: file
+          # flags: --linelength=50 # Optional
+          targets: './cpp_src'
 
       # - uses: actions/setup-python@v1
       #   with:
