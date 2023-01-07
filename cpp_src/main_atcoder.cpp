@@ -36,8 +36,7 @@ int main() {
     for (int j = 0; j <= W; ++j) {
       if (i == 0) dp[i][a[j]] = 1;
       chmin(dp[i + 1][j], dp[i][j]);
-      if (j >= a[i])
-      {
+      if (j >= a[i]) {
         chmin(dp[i + 1][j], dp[i][j - a[i]] + 1)
       };
 
@@ -47,8 +46,9 @@ int main() {
   }
 
   if (dp[N][W] <= K)
+  {
     cout << "Yes" << endl;
-  else
+  } else
     cout << "No" << endl;
 
   const std::string s = "hello";
