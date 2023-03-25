@@ -48,6 +48,16 @@ jobs:
           fail_on_error: true
           filter_mode: nofilter
 
+  yapf-format:
+    name: runner / clang-format
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: hsnuhayato/yapf-action@master
+      with:
+        args: --verbose
+
+
       # - uses: reviewdog/action-cpplint@master
       #   with:
       #     github_token: ${{ secrets.github_token }}
