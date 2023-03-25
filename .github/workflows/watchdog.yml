@@ -55,7 +55,7 @@ jobs:
       - uses: actions/checkout@v2
       - uses: hsnuhayato/yapf-action@add_review_dog
         with:
-          args: --verbose --style={based_on_style: google, column_limit: 100, indent_width: 4}
+          args: "--verbose --style={based_on_style: google, column_limit: 100, indent_width: 4}"
           github_token: ${{ secrets.github_token }}
           reporter: github-pr-review
           level: error
