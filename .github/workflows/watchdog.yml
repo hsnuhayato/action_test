@@ -54,8 +54,8 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - uses: hsnuhayato/yapf-action@master
-      with:
-        args: --verbose
+        with:
+          args: --verbose
 
 
       # - uses: reviewdog/action-cpplint@master
