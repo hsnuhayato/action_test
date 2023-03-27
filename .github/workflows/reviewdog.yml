@@ -62,6 +62,21 @@ jobs:
           fail_on_error: true
           filter_mode: nofilter
 
+   mypy:
+    name: runner / mypy
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: tsuyoshicho/action-mypy@v3.11.0
+        with:
+          target: './script'
+          mypy_flags: "--check-untyped-defs  --ignore-missing-imports"
+          github_token: ${{ secrets.github_token }}
+          reporter: github-pr-review
+          level: error
+          fail_on_error: true
+          filter_mode: nofilter
+
 
       # - uses: reviewdog/action-cpplint@master
       #   with:
