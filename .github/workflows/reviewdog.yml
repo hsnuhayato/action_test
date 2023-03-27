@@ -62,7 +62,7 @@ jobs:
           fail_on_error: true
           filter_mode: nofilter
 
-   mypy:
+  mypy:
     name: runner / mypy
     runs-on: ubuntu-latest
     steps:
