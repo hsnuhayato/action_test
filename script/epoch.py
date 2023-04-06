@@ -47,6 +47,7 @@ if __name__ == '__main__':
         regist_btn.click()
         webot.wait_hidden(regist_btn, 3)
         webot.try_cmd(3)
+        webot.try_cmd(4)
         break
 
     webot.tear_down()
