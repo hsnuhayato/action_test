@@ -28,6 +28,7 @@ jobs:
           filter_mode: nofilter
           reviewdog_flags: -diff="git diff ${{ github.base_ref }}" -tee
       - name: Debug
+        if: ${{ always() }}
         uses: mxschmitt/action-tmate@v3
 
   clang-format:
